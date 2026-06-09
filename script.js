@@ -38,7 +38,7 @@ function tick() {
 setTimeout(tick, 650);
 
 const revealTargets = document.querySelectorAll(
-    ".hero-shell, .about-grid, .building-strip, .project-featured, .project-card, .graph-layout, .analytics-banner, .contact-block"
+    ".hero-shell, .about-grid, .building-strip, .project-card, .hello-panel, .contact-block"
 );
 
 const revealObserver = new IntersectionObserver((entries) => {
@@ -69,6 +69,11 @@ const navObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.35 });
 
 sections.forEach((section) => navObserver.observe(section));
+
+const visitorCount = document.getElementById("visitor-count");
+if (visitorCount) {
+    visitorCount.textContent = "0012";
+}
 
 const canvas = document.getElementById("particle-canvas");
 const ctx = canvas?.getContext("2d");

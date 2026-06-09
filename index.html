@@ -17,13 +17,21 @@
     <canvas id="particle-canvas" aria-hidden="true"></canvas>
 
     <nav class="nav">
-        <span class="nav-logo">AK</span>
+        <div class="nav-brand">
+            <span class="nav-logo">AK</span>
+            <span class="nav-logo-sub">Your note here</span>
+        </div>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#building">Building</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#hello">Say hello</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="visitor-badge" aria-label="Website visitors">
+            <span class="visitor-badge-label">Visitors</span>
+            <strong id="visitor-count">0012</strong>
+        </div>
     </nav>
 
     <main>
@@ -127,102 +135,102 @@
             <div class="section-inner">
                 <p class="section-label">Projects</p>
                 <h2 class="section-title">Selected work</h2>
-
-                <article class="project-featured">
-                    <div class="project-featured-content">
-                        <div class="project-tag">Featured</div>
-                        <h3>Aether</h3>
+                <div class="projects-scroll" aria-label="Scrollable project showcase">
+                    <article class="project-card project-card--wide">
+                        <div class="project-card-top">
+                            <div>
+                                <p class="project-card-label">Project 01</p>
+                                <h3>Aether</h3>
+                            </div>
+                            <span class="project-status">In progress</span>
+                        </div>
                         <p>
-                            An AI-powered mental and physical wellness platform. Aether tracks mood, analyzes emotional
-                            patterns over time, recommends music matched to a state, and connects users to the right support.
+                            AI wellness platform that tracks mood, surfaces emotional patterns, and connects people with
+                            the right support at the right time. Add your own feature notes right here.
                         </p>
                         <ul class="project-tech">
                             <li>React</li>
-                            <li>Python / FastAPI</li>
-                            <li>OpenAI API</li>
+                            <li>FastAPI</li>
+                            <li>OpenAI</li>
                             <li>PostgreSQL</li>
-                            <li>Spotify API</li>
                         </ul>
-                        <div class="project-links">
-                            <a href="#" class="project-link">GitHub</a>
+                        <div class="project-media-grid">
+                            <div class="project-image-slot">Image placeholder 1</div>
+                            <div class="project-image-slot">Image placeholder 2</div>
                         </div>
-                    </div>
-                    <div class="project-media-slot">
-                        <div class="media-placeholder">
-                            <span>Project screenshot</span>
-                            <p>Drop in a dashboard, product screen, or mobile mockup here.</p>
-                        </div>
-                    </div>
-                </article>
-
-                <div class="project-detail-grid">
-                    <article class="project-card">
-                        <div class="project-card-top">
-                            <div>
-                                <p class="project-card-label">Case study</p>
-                                <h3>RAG vs Keyword Search</h3>
-                            </div>
-                            <a href="#" class="icon-link" aria-label="View on GitHub">
-                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.164 6.839 9.489.5.09.682-.218.682-.483 0-.237-.009-.868-.014-1.703-2.782.602-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0 1 12 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
-                            </a>
-                        </div>
-                        <p>
-                            A comparative system showing semantic retrieval versus traditional keyword search, with space for
-                            benchmark notes and results.
-                        </p>
-                        <div class="project-image-slot">Screenshot slot</div>
                     </article>
 
-                    <article class="project-card">
+                    <article class="project-card project-card--wide">
                         <div class="project-card-top">
                             <div>
-                                <p class="project-card-label">Engineering</p>
-                                <h3>Architecture notes</h3>
+                                <p class="project-card-label">Project 02</p>
+                                <h3>RAG Search Lab</h3>
                             </div>
+                            <span class="project-status">Research</span>
                         </div>
                         <p>
-                            Use this area for system diagrams, pipeline sketches, or design decisions. It is intentionally
-                            simple so the content stays readable.
+                            A comparison between semantic retrieval and keyword search with room for benchmarks, results, and
+                            architecture notes.
                         </p>
-                        <div class="project-arch-slot">Architecture image slot</div>
+                        <ul class="project-tech">
+                            <li>Python</li>
+                            <li>LangChain</li>
+                            <li>FAISS</li>
+                            <li>Streamlit</li>
+                        </ul>
+                        <div class="project-media-grid">
+                            <div class="project-image-slot">Image placeholder 1</div>
+                            <div class="project-image-slot">Image placeholder 2</div>
+                        </div>
+                    </article>
+
+                    <article class="project-card project-card--wide">
+                        <div class="project-card-top">
+                            <div>
+                                <p class="project-card-label">Project 03</p>
+                                <h3>Ops Dashboard</h3>
+                            </div>
+                            <span class="project-status">Shipped</span>
+                        </div>
+                        <p>
+                            A product-style dashboard for internal workflows. Use this section for screenshots, architecture
+                            diagrams, and exact impact notes.
+                        </p>
+                        <ul class="project-tech">
+                            <li>TypeScript</li>
+                            <li>Next.js</li>
+                            <li>PostgreSQL</li>
+                            <li>Tailwind</li>
+                        </ul>
+                        <div class="project-media-grid">
+                            <div class="project-image-slot">Image placeholder 1</div>
+                            <div class="project-image-slot">Image placeholder 2</div>
+                        </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section class="section" id="graph">
+        <section class="section" id="hello">
             <div class="section-inner">
-                <p class="section-label">GitHub</p>
-                <div class="graph-layout">
-                    <div>
-                        <h2 class="section-title">Contribution graph</h2>
-                        <p class="section-copy">
-                            This pulls in your live GitHub contribution heatmap so recruiters get a quick sense of your recent
-                            activity.
-                        </p>
+                <p class="section-label">Say hello</p>
+                <div class="hello-panel">
+                    <h2>Give me a real hello area.</h2>
+                    <p>
+                        Put your warm intro, a line about what you are building, or a human message here. This is the part
+                        where a recruiter or friend can instantly understand how to reach you.
+                    </p>
+                    <div class="hello-actions">
+                        <a href="mailto:your@email.com" class="btn btn-primary contact-cta">
+                            Email me
+                        </a>
+                        <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" class="btn btn-ghost">
+                            WhatsApp
+                        </a>
                     </div>
-                    <div class="graph-card">
-                        <img
-                            class="contrib-graph"
-                            src="https://ghchart.rshah.org/aakash-kr-7"
-                            alt="GitHub contribution graph for Aakash Kumar"
-                        >
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="analytics">
-            <div class="section-inner">
-                <p class="section-label">Analytics</p>
-                <div class="analytics-banner">
-                    <div>
-                        <h2>Visitor analytics</h2>
-                        <p>
-                            Add your preferred tracker here, such as Plausible, Fathom, or Google Analytics.
-                        </p>
-                    </div>
-                    <code class="code-pill">&lt;script src="your-analytics-snippet"&gt;&lt;/script&gt;</code>
+                    <p class="hello-footnote">
+                        Replace `91XXXXXXXXXX` with your real number in WhatsApp format.
+                    </p>
                 </div>
             </div>
         </section>
@@ -233,13 +241,9 @@
                 <div class="contact-block">
                     <h2>Let's work on something good.</h2>
                     <p>
-                        Open to internships, research collaborations, and product-minded teams. If you are reviewing this
-                        on a custom domain later, this section is where the simple call to action should land.
+                        Open to internships, research collaborations, and product-minded teams. Use this as the short,
+                        recruiter-friendly contact close.
                     </p>
-                    <a href="mailto:your@email.com" class="btn btn-primary contact-cta">
-                        Say hello
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><polyline points="12 5 19 12 12 19"/></svg>
-                    </a>
                 </div>
             </div>
         </section>
