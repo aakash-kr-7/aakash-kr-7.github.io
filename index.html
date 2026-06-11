@@ -1,47 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aakash Kumar - Backend Systems & Data Infrastructure</title>
-<meta name="description" content="Aakash Kumar portfolio: backend systems, data infrastructure, vector retrieval, AI products, and ML systems.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-*, *::before, *::after { box-sizing: border-box; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aakash Kumar - Backend Systems & Data Infrastructure</title>
+    <meta name="description" content="Aakash Kumar portfolio: backend systems, data infrastructure, vector retrieval, AI products, and ML systems.">
+    
+    <link rel="icon" type="image/png" href="./logo.png" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+    *, *::before, *::after { box-sizing: border-box; }
 
-:root {
-  --black: #050507;
-  --black-2: #0b0b12;
-  --black-3: #11111b;
-  --paper: #f7f3ea;
-  --soft: #d9d1c2;
-  --muted: #978f84;
-  --line: rgba(247, 243, 234, 0.14);
-  --line-strong: rgba(247, 243, 234, 0.28);
-  --amber: #ffb000;
-  --amber-2: #ff7a1a;
-  --violet: #9b5cff;
-  --blue: #5fb7ff;
-  --blue-2: #1d5cff;
-  --font: "DM Sans", system-ui, sans-serif;
-  --mono: "IBM Plex Mono", ui-monospace, monospace;
-  --max: 1180px;
-}
+    :root {
+      --black: #050507;
+      --black-2: #0b0b12;
+      --black-3: #11111b;
+      --paper: #f7f3ea;
+      --soft: #d9d1c2;
+      --muted: #978f84;
+      --line: rgba(247, 243, 234, 0.14);
+      --line-strong: rgba(247, 243, 234, 0.28);
+      --amber: #d69a28;
+      --amber-2: #9b6a1f;
+      --violet: #9b5cff;
+      --violet-2: #5f35d6;
+      --blue: #3fd6ff;
+      --blue-2: #2876ff;
+      --font: "DM Sans", system-ui, sans-serif;
+      --mono: "IBM Plex Mono", ui-monospace, monospace;
+      --max: 1180px;
+    }
+    /* Rest of your CSS goes here */
+    </style>
+</head>
 
 html { scroll-behavior: smooth; scroll-padding-top: 96px; }
-
 body {
   margin: 0;
   color: var(--paper);
   background:
     linear-gradient(90deg, rgba(247,243,234,0.045) 1px, transparent 1px),
     linear-gradient(rgba(247,243,234,0.035) 1px, transparent 1px),
-    linear-gradient(124deg, rgba(29,92,255,0.16), transparent 34%),
-    linear-gradient(238deg, rgba(155,92,255,0.16), transparent 42%),
-    linear-gradient(314deg, rgba(255,176,0,0.16), transparent 38%),
-    linear-gradient(135deg, #050507 0%, #0d0d16 52%, #08080c 100%);
+    linear-gradient(124deg, rgba(40,118,255,0.2), transparent 34%),
+    linear-gradient(238deg, rgba(155,92,255,0.22), transparent 42%),
+    linear-gradient(314deg, rgba(214,154,40,0.055), transparent 40%),
+    linear-gradient(135deg, #030306 0%, #080712 44%, #0d0a18 72%, #050508 100%);
   background-size: 72px 72px, 72px 72px, auto, auto, auto, auto;
   font-family: var(--font);
   line-height: 1.5;
@@ -57,7 +64,7 @@ body::before {
   pointer-events: none;
   background:
     repeating-linear-gradient(0deg, rgba(255,255,255,0.025) 0 1px, transparent 1px 5px),
-    linear-gradient(120deg, rgba(255,176,0,0.08), transparent 24%, rgba(95,183,255,0.08) 50%, transparent 68%, rgba(155,92,255,0.09));
+    linear-gradient(120deg, rgba(155,92,255,0.11), transparent 24%, rgba(63,214,255,0.11) 50%, transparent 68%, rgba(214,154,40,0.035));
   opacity: 0.65;
 }
 
@@ -91,15 +98,24 @@ button { font: inherit; color: inherit; }
 }
 
 .brand-mark {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   display: grid;
   place-items: center;
-  border: 1px solid rgba(255,176,0,0.5);
-  background: linear-gradient(135deg, var(--amber), var(--violet));
-  color: #08080c;
-  font-family: var(--mono);
-  font-weight: 700;
+  padding: 2px;
+  border: 1px solid rgba(63,214,255,0.42);
+  background:
+    linear-gradient(135deg, rgba(63,214,255,0.38), rgba(155,92,255,0.5)),
+    rgba(247,243,234,0.04);
+  overflow: hidden;
+}
+
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  filter: saturate(0.94) contrast(1.08);
 }
 
 .brand-name {
@@ -170,9 +186,9 @@ button { font: inherit; color: inherit; }
 
 .action-link {
   padding: 0 18px;
-  background: linear-gradient(135deg, var(--amber), var(--amber-2));
-  color: #090907;
-  border-color: rgba(255,176,0,0.72);
+  background: linear-gradient(135deg, var(--blue), var(--violet));
+  color: #050507;
+  border-color: rgba(63,214,255,0.68);
 }
 
 .icon-link:hover, .action-link:hover, .contact-link:hover {
@@ -213,7 +229,7 @@ button { font: inherit; color: inherit; }
   display: block;
   width: 0;
   height: 100%;
-  background: linear-gradient(90deg, var(--amber), var(--violet), var(--blue));
+  background: linear-gradient(90deg, var(--violet), var(--blue), rgba(155,92,255,0.92));
 }
 
 main { position: relative; z-index: 1; }
@@ -247,7 +263,7 @@ main { position: relative; z-index: 1; }
   align-items: center;
   gap: 10px;
   margin-bottom: 18px;
-  color: var(--amber);
+  color: var(--blue);
   font-family: var(--mono);
   font-size: 12px;
   font-weight: 600;
@@ -258,7 +274,7 @@ main { position: relative; z-index: 1; }
   content: "";
   width: 38px;
   height: 1px;
-  background: var(--amber);
+  background: var(--blue);
 }
 
 .hero h1 {
@@ -297,8 +313,8 @@ main { position: relative; z-index: 1; }
 }
 
 #achievementRotator {
-  color: var(--amber);
-  text-shadow: 0 0 26px rgba(255,176,0,0.18);
+  color: var(--blue);
+  text-shadow: 0 0 26px rgba(63,214,255,0.22);
 }
 
 .hero-copy {
@@ -341,7 +357,7 @@ main { position: relative; z-index: 1; }
 }
 
 .signal span:nth-child(2) { height: 28px; background: var(--violet); }
-.signal span:nth-child(3) { height: 36px; background: var(--amber); }
+.signal span:nth-child(3) { height: 36px; background: var(--blue); }
 
 .command-body {
   padding: 20px;
@@ -438,8 +454,8 @@ main { position: relative; z-index: 1; }
   padding: clamp(20px, 3vw, 34px);
   border: 1px solid var(--line-strong);
   background:
-    linear-gradient(110deg, rgba(255,176,0,0.08), transparent 32%),
-    linear-gradient(280deg, rgba(95,183,255,0.09), transparent 42%),
+    linear-gradient(110deg, rgba(155,92,255,0.11), transparent 34%),
+    linear-gradient(280deg, rgba(63,214,255,0.12), transparent 42%),
     rgba(247, 243, 234, 0.05);
   position: relative;
   overflow: hidden;
@@ -463,7 +479,7 @@ main { position: relative; z-index: 1; }
 
 .project-card:hover,
 .project-card:focus-visible {
-  border-color: rgba(255,176,0,0.58);
+  border-color: rgba(63,214,255,0.58);
   outline: none;
 }
 
@@ -516,7 +532,7 @@ main { position: relative; z-index: 1; }
 }
 
 .open-hint {
-  color: var(--amber);
+  color: var(--blue);
 }
 
 .proof-grid {
@@ -560,7 +576,7 @@ main { position: relative; z-index: 1; }
 }
 
 .proof-list b {
-  color: var(--amber);
+  color: var(--blue);
   font-family: var(--mono);
   font-size: 12px;
   text-transform: uppercase;
@@ -594,8 +610,8 @@ main { position: relative; z-index: 1; }
 .contact-band {
   padding: clamp(42px, 7vw, 74px);
   background:
-    linear-gradient(135deg, rgba(255,176,0,0.13), transparent 38%),
-    linear-gradient(295deg, rgba(95,183,255,0.12), rgba(155,92,255,0.12));
+    linear-gradient(135deg, rgba(155,92,255,0.14), transparent 38%),
+    linear-gradient(295deg, rgba(63,214,255,0.14), rgba(155,92,255,0.14));
 }
 
 .contact-band h2 {
@@ -666,8 +682,8 @@ main { position: relative; z-index: 1; }
   overflow: auto;
   border: 1px solid var(--line-strong);
   background:
-    linear-gradient(135deg, rgba(255,176,0,0.12), transparent 28%),
-    linear-gradient(300deg, rgba(95,183,255,0.14), rgba(155,92,255,0.12) 36%, transparent 70%),
+    linear-gradient(135deg, rgba(155,92,255,0.16), transparent 30%),
+    linear-gradient(300deg, rgba(63,214,255,0.15), rgba(155,92,255,0.14) 36%, transparent 70%),
     rgba(9, 9, 14, 0.97);
   box-shadow: 0 28px 120px rgba(0,0,0,0.64);
 }
@@ -687,7 +703,7 @@ main { position: relative; z-index: 1; }
 }
 
 .detail-label {
-  color: var(--amber);
+  color: var(--blue);
   font-family: var(--mono);
   font-size: 12px;
   text-transform: uppercase;
@@ -932,7 +948,9 @@ svg { flex: 0 0 auto; }
 
 <header class="topbar">
   <a class="brand" href="#home" aria-label="Aakash Kumar home">
-    <span class="brand-mark">AK</span>
+    <span class="brand-mark">
+      <img src="./aakash.png" alt="Aakash Kumar">
+    </span>
     <span class="brand-copy">
       <span class="brand-name">Aakash Kumar</span>
       <span class="brand-quote">Build systems that remember, scale, and feel alive.</span>
